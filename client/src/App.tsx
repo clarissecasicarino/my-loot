@@ -138,8 +138,8 @@ function App() {
               {teamStats.period &&
                 (teamStats.period.from || teamStats.period.to) && (
                   <div className="period-info">
-                    Period: {teamStats.period.from || "Start"} -{" "}
-                    {teamStats.period.to || "Now"}
+                    Period: {dateTimeUtility(teamStats.period.from ?? 'Start')} -{" "}
+                    {dateTimeUtility(teamStats.period.to ?? '')}
                   </div>
                 )}
             </div>
