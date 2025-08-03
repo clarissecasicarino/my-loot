@@ -175,35 +175,6 @@ app.get('/teams/:id/leaderboard', async (req, res) => {
   }
 });
 
-// POST /coin_earnings
-app.post('/coin_earnings', async (req, res) => {
-  const { user_id, amount, description } = req.body;
-  
-  if (!user_id || !amount || amount <= 0) {
-    return res.status(400).json({ error: 'Invalid data. user_id and positive amount required.' });
-  }
-  
-  try {
-    const query = `
-      INSERT INTO coin_earnings (user_id, amount, description)
-      VALUES (?, ?, ?)
-    `;
-    
-    const [result] = await db.promise().query(query, [user_id, amount, description || null]);
-    
-    res.status(201).json({
-      id: result.insertId,
-      user_id,
-      amount,
-      description,
-      message: 'Coin earning added successfully'
-    });
-    
-  } catch (error) {
-    console.error('Error adding coin earning:', error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
