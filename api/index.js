@@ -27,7 +27,7 @@ db.connect((err) => {
 });
 
 // GET /teams/:id/stats
-app.get('/teams/:id/stats', async (req, res) => {
+app.get('/api/teams/:id/stats', async (req, res) => {
   const teamId = req.params.id;
   
   try {
@@ -91,7 +91,7 @@ app.get('/teams/:id/stats', async (req, res) => {
 });
 
 // GET /teams/:id/leaderboard?from=...&to=...
-app.get('/teams/:id/leaderboard', async (req, res) => {
+app.get('/api/teams/:id/leaderboard', async (req, res) => {
   const teamId = req.params.id;
   const { from, to } = req.query;
   
@@ -179,3 +179,5 @@ app.get('/teams/:id/leaderboard', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+module.exports = app; 
