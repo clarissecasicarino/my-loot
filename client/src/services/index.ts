@@ -42,7 +42,7 @@ class ApiService {
       return response.data;
     } catch (error) {
       console.error('Error fetching team leaderboard:', error);
-      throw new Error('Failed to fetch team leaderboard');
+      throw new Error('Sorry, there are no team leaderboards within this period. Please try a different date range.');
     }
   }
 
