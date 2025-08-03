@@ -42,6 +42,7 @@ DB_USER=root
 DB_PASSWORD=
 DB_NAME=myloot_test
 PORT=3001
+REACT_APP_API_URL=http://localhost:3001
 
 # Start the server
 npm run dev          # Starts on http://localhost:3001
