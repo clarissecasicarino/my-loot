@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { TeamStats } from './types/types';
 
-const API_BASE = process.env.REACT_APP_API_URL || 'https://my-loot.vercel.app/';
+const API_BASE = process.env.REACT_APP_API_URL || 'https://my-loot.vercel.app';
 
 class ApiService {
   private baseURL: string;
