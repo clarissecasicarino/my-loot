@@ -1,0 +1,16 @@
+{
+  "name": "myloot-dashboard",
+  "version": "1.0.0",
+  "description": "Team coin earning dashboard",
+  "main": "api/server.js",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "start": "cd api && npm start",
+    "postinstall": "cd api && npm install"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
