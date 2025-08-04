@@ -14,7 +14,7 @@ class ApiService {
   async getTeamStats(teamId: number): Promise<TeamStats> {
     try {
       const response = await axios.get<TeamStats>(
-        `${this.baseURL}/teams/${teamId}/stats`
+        `${this.baseURL}/api/teams/${teamId}/stats`
       );
       return response.data;
     } catch (error) {
