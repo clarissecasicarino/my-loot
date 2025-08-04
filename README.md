@@ -36,13 +36,12 @@ mysql -u root -p < database.sql
 cd api
 npm install
 
-# Create a .env file, then copy and paste the credentials below to the file.
+# Create a .env file in the root directory of the api folder, then copy and paste the credentials below to the file.
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=myloot_test
 PORT=3001
-REACT_APP_API_URL=http://localhost:3001
 
 # Start the server
 npm run dev          # Starts on http://localhost:3001
@@ -52,6 +51,10 @@ npm run dev          # Starts on http://localhost:3001
 ```bash
 cd client
 npm install
+
+# Create another .env file in the root directory of the client folder and add this credential:
+REACT_APP_API_URL=http://localhost:3001
+
 npm start           # Starts on http://localhost:3000
 ```
 
