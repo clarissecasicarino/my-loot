@@ -27,7 +27,7 @@ db.connect((err) => {
 });
 
 // GET /teams/:id/stats
-app.get('/api/teams/:id/stats', async (req, res) => {
+app.get('/teams/:id/stats', async (req, res) => {
   const teamId = req.params.id;
   
   try {
@@ -91,7 +91,7 @@ app.get('/api/teams/:id/stats', async (req, res) => {
 });
 
 // GET /teams/:id/leaderboard?from=...&to=...
-app.get('/api/teams/:id/leaderboard', async (req, res) => {
+app.get('/teams/:id/leaderboard', async (req, res) => {
   const teamId = req.params.id;
   const { from, to } = req.query;
   
