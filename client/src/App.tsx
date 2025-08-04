@@ -14,15 +14,6 @@ function App() {
   const [toDate, setToDate] = useState<string>("");
   const [useFilters, setUseFilters] = useState<boolean>(false);
 
-
-  // remove later
-  useEffect(() => {
-    console.log("🔍 Environment check:");
-    console.log("NODE_ENV:", process.env.NODE_ENV);
-    console.log("REACT_APP_API_URL:", process.env.REACT_APP_API_URL);
-    console.log("API_BASE from service:", apiService); // This will show the actual URL being used
-  }, []);
-
   const fetchTeamStats = useCallback(async () => {
     setLoading(true);
     setError("");
